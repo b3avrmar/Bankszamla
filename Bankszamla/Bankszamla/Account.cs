@@ -23,5 +23,20 @@ namespace Bankszamla
             this.creditLimit = openingBalance * 0.2m;
         }
 
+        public string GetAccountNumber()
+        {
+            return accountNumber;
+        }
+
+        public string GetOwnerName()
+        {
+            return ownerName;
+        }
+
+        public decimal GetBalance()
+        {
+            return balance;
+        }
+
     }
 }
