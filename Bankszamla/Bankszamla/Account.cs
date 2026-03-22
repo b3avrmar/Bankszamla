@@ -72,6 +72,23 @@ namespace Bankszamla
             return false;
         }
 
+        public void SaveLogToFile()
+        {
+            string folder = "logs";
 
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+            }
+
+            string path = Path.Combine(folder, accountNumber + ".txt");
+
+            File.WriteAllLines(path, logs);
+        }
+
+        public override string ToString()
+        {
+            return $"{accountNumber} - {ownerName} - Egyenleg: {balance} Ft";
+        }
     }
 }
