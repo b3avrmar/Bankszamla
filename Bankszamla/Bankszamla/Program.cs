@@ -114,6 +114,80 @@ namespace Bankszamla
             }
         }
 
-       
+        static void MakeDeposit()
+        {
+            Console.Write("Számlaszám: ");
+            string accountNumber = Console.ReadLine();
+
+            Account account = FindAccount(accountNumber);
+
+            if (account == null)
+            {
+                Console.WriteLine("Nincs ilyen számla.");
+                return;
+            }
+
+            Console.Write("Összeg: ");
+            decimal amount = decimal.Parse(Console.ReadLine());
+
+            account.Deposit(amount);
+            Console.WriteLine("Befizetés sikeres.");
+        }
+
+        static void MakeWithdraw()
+        {
+            Console.Write("Számlaszám: ");
+            string accountNumber = Console.ReadLine();
+
+            Account account = FindAccount(accountNumber);
+
+            if (account == null)
+            {
+                Console.WriteLine("Nincs ilyen számla.");
+                return;
+            }
+
+            Console.Write("Összeg: ");
+            decimal amount = decimal.Parse(Console.ReadLine());
+
+            if (account.Withdraw(amount))
+            {
+                Console.WriteLine("Kifizetés sikeres.");
+            }
+            else
+            {
+                Console.WriteLine("Nincs elég fedezet.");
+            }
+        }
+
+        static void MakeTransfer()
+        {
+            Console.Write("Forrás számla: ");
+            string fromNumber = Console.ReadLine();
+
+            Console.Write("Cél számla: ");
+            string toNumber = Console.ReadLine();
+
+            Account fromAccount = FindAccount(fromNumber);
+            Account toAccount = FindAccount(toNumber);
+
+            if (fromAccount == null || toAccount == null)
+            {
+                Console.WriteLine("Számla nem található.");
+                return;
+            }
+
+            Console.Write("Összeg: ");
+            decimal amount = decimal.Parse(Console.ReadLine());
+
+            if (fromAccount.Transfer(toAccount, amount))
+            {
+                Console.WriteLine("Utalás sikeres.");
+            }
+            else
+            {
+                Console.WriteLine("Sikertelen utalás.");
+            }
+        }
     }
 }
