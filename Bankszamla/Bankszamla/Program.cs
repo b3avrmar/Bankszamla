@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,32 @@ namespace Bankszamla
             }
         }
 
-        
+        static void ShowMenu()
+        {
+            Console.WriteLine("===== BANK DASHBOARD =====");
+            Console.WriteLine("1 - Számlák listázása");
+            Console.WriteLine("2 - Befizetés");
+            Console.WriteLine("3 - Kifizetés");
+            Console.WriteLine("4 - Utalás");
+            Console.WriteLine("5 - Kilépés");
+            Console.Write("Választás: ");
+        }
+
+        static void LoadAccounts()
+        {
+            string[] lines = File.ReadAllLines("szamlak.txt");
+
+            foreach (string line in lines)
+            {
+                string[] data = line.Split(';');
+
+                string accountNumber = data[0];
+                string ownerName = data[1];
+                decimal balance = decimal.Parse(data[2]);
+
+                Account account = new Account(accountNumber, ownerName, balance);
+                accounts.Add(account);
+            }
+        }
     }
 }
