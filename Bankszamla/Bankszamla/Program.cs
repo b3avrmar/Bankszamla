@@ -189,5 +189,13 @@ namespace Bankszamla
                 Console.WriteLine("Sikertelen utalás.");
             }
         }
+
+        static void SaveAllLogs()
+        {
+            foreach (Account account in accounts)
+            {
+                account.SaveLogToFile();
+            }
+        }
     }
 }

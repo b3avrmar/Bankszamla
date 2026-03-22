@@ -1,0 +1,7 @@
+C:\Users\Mark\source\repos\Bankszamla\Bankszamla\Bankszamla\bin\Debug\Bankszamla.exe.config
+C:\Users\Mark\source\repos\Bankszamla\Bankszamla\Bankszamla\bin\Debug\Bankszamla.exe
+C:\Users\Mark\source\repos\Bankszamla\Bankszamla\Bankszamla\bin\Debug\Bankszamla.pdb
+C:\Users\Mark\source\repos\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.csproj.AssemblyReference.cache
+C:\Users\Mark\source\repos\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.csproj.CoreCompileInputs.cache
+C:\Users\Mark\source\repos\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.exe
+C:\Users\Mark\source\repos\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.pdb
