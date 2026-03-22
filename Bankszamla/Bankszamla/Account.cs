@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,40 @@ namespace Bankszamla
         {
             return balance;
         }
+
+        public void Deposit(decimal amount)
+        {
+            if (amount > 0)
+            {
+                balance += amount;
+                logs.Add($"{DateTime.Now};Befizetés;{amount};{balance}");
+            }
+        }
+
+        public bool Withdraw(decimal amount)
+        {
+            if (amount > 0 && balance - amount >= -creditLimit)
+            {
+                balance -= amount;
+                logs.Add($"{DateTime.Now};Kifizetés;{amount};{balance}");
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool Transfer(Account targetAccount, decimal amount)
+        {
+            if (Withdraw(amount))
+            {
+                targetAccount.Deposit(amount);
+                logs.Add($"{DateTime.Now};Utalás;{amount};{balance}");
+                return true;
+            }
+
+            return false;
+        }
+
 
     }
 }
