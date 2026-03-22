@@ -1,0 +1,3 @@
+SZA-101;Kovács János;50000
+SZA-102;Nagy Alíz;120000
+SZA-103;Kiss Ádám;2500
