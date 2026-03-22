@@ -91,5 +91,29 @@ namespace Bankszamla
                 accounts.Add(account);
             }
         }
+
+        static Account FindAccount(string accountNumber)
+        {
+            foreach (Account account in accounts)
+            {
+                if (account.GetAccountNumber() == accountNumber)
+                {
+                    return account;
+                }
+            }
+            return null;
+        }
+
+        static void ShowAccounts()
+        {
+            Console.WriteLine("===== SZÁMLÁK =====");
+
+            foreach (Account account in accounts)
+            {
+                Console.WriteLine(account);
+            }
+        }
+
+       
     }
 }
