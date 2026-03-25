@@ -43,8 +43,12 @@ namespace Bankszamla
                     case "4":
                         MakeTransfer();
                         break;
-
+                    
                     case "5":
+                        ChangeCreditLimit();
+                        break;
+
+                    case "6":
                         SaveAllLogs();
                         Console.WriteLine("Naplók elmentve.");
                         running = false;
@@ -71,7 +75,8 @@ namespace Bankszamla
             Console.WriteLine("2 - Befizetés");
             Console.WriteLine("3 - Kifizetés");
             Console.WriteLine("4 - Utalás");
-            Console.WriteLine("5 - Kilépés");
+            Console.WriteLine("5 - Hitelkeret módositása");
+            Console.WriteLine("6 - Kilépés");
             Console.Write("Választás: ");
         }
 
@@ -188,6 +193,22 @@ namespace Bankszamla
             {
                 Console.WriteLine("Sikertelen utalás.");
             }
+        }
+
+        static void ChangeCreditLimit()
+        {
+            Console.Write("Számlaszám: ");
+            string accountNumber = Console.ReadLine();
+            Account account = FindAccount(accountNumber);
+            if (account == null)
+            {
+                Console.WriteLine("Nincs ilyen számla.");
+                return;
+            }
+            Console.Write("Új hitelkeret: ");
+            decimal newLimit = decimal.Parse(Console.ReadLine());
+            account.changeCreditLimit(newLimit);
+            Console.WriteLine("Hitelkeret módosítva.");
         }
 
         static void SaveAllLogs()

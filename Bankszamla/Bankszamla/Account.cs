@@ -7,6 +7,7 @@ class Account
     private string accountNumber;
     private string ownerName;
     private decimal balance;
+    private decimal creditLimitPercent;
     private decimal creditLimit;
     private List<string> logs;
 
@@ -15,7 +16,8 @@ class Account
         this.accountNumber = accountNumber;
         this.ownerName = ownerName;
         this.balance = openingBalance;
-        this.creditLimit = openingBalance * 0.2m;
+        this.creditLimitPercent = 0.2m;
+        this.creditLimit = openingBalance * creditLimitPercent;
         logs = new List<string>();
     }
 
@@ -53,6 +55,14 @@ class Account
             return true;
         }
         return false;
+    }
+
+    public void changeCreditLimit(decimal newLimit)
+    {
+        if (newLimit >= 0)
+        {
+            creditLimit = newLimit;
+        }
     }
 
     public void SaveLogToFile()
