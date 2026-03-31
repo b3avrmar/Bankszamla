@@ -9,6 +9,7 @@ class Account
     private decimal balance;
     private decimal creditLimitPercent;
     private decimal creditLimit;
+    private decimal maximumCreditLimit;
     private List<string> logs;
 
     public Account(string accountNumber, string ownerName, decimal openingBalance)
@@ -18,6 +19,7 @@ class Account
         this.balance = openingBalance;
         this.creditLimitPercent = 0.2m;
         this.creditLimit = openingBalance * creditLimitPercent;
+        this.maximumCreditLimit = creditLimit;
         logs = new List<string>();
     }
 
@@ -59,7 +61,7 @@ class Account
 
     public void changeCreditLimit(decimal newLimit)
     {
-        if (newLimit >= 0)
+        if (newLimit >= 0 && newLimit <= maximumCreditLimit)
         {
             creditLimit = newLimit;
         }

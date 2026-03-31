@@ -13,3 +13,11 @@ J:\2025-2026\Asztali_alk\0323\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Banksza
 J:\2025-2026\Asztali_alk\0323\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.csproj.CoreCompileInputs.cache
 J:\2025-2026\Asztali_alk\0323\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.exe
 J:\2025-2026\Asztali_alk\0323\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.pdb
+J:\2025-2026\Asztali_alk\0331\Bankszamla\Bankszamla\Bankszamla\bin\Debug\Bankszamla.exe.config
+J:\2025-2026\Asztali_alk\0331\Bankszamla\Bankszamla\Bankszamla\bin\Debug\Bankszamla.exe
+J:\2025-2026\Asztali_alk\0331\Bankszamla\Bankszamla\Bankszamla\bin\Debug\Bankszamla.pdb
+J:\2025-2026\Asztali_alk\0331\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.csproj.AssemblyReference.cache
+J:\2025-2026\Asztali_alk\0331\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.exe.config
+J:\2025-2026\Asztali_alk\0331\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.csproj.CoreCompileInputs.cache
+J:\2025-2026\Asztali_alk\0331\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.exe
+J:\2025-2026\Asztali_alk\0331\Bankszamla\Bankszamla\Bankszamla\obj\Debug\Bankszamla.pdb
